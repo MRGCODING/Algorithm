@@ -18,5 +18,17 @@ public class LambdaTest {
 			return s1.compareTo(s2);
 		});
 		System.out.println(list);
+		// Scanner in = new Scanner(System.in);
+		// int n = in.nextInt();
+		// int k = in.nextInt();
+		// int nums = 0;
+		// for(int i = 1;i <= n;i++) {
+		// for(int j = 1;j <= n;j++) {
+		//// if(j == 0) continue;
+		// if((i % j) >= k) nums++;
+		// }
+		// }
+		// System.out.println(nums);
+
 	}
 }
