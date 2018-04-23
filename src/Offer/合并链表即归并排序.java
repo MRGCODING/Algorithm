@@ -5,14 +5,14 @@ import Offer.pojo.ListNode;
 public class 合并链表即归并排序 {
 	public ListNode Merge(ListNode list1, ListNode list2) {
 		ListNode pre = null;
-		if(list1==null)
+		if (list1 == null)
 			return list2;
-		if(list2==null)
+		if (list2 == null)
 			return list1;
-		if(list1.val<list2.val){
+		if (list1.val < list2.val) {
 			pre = list1;
 			pre.next = Merge(list1.next, list2);
-		}else{
+		} else {
 			pre = list2;
 			pre.next = Merge(list1, list2.next);
 		}
