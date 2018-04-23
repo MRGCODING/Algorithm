@@ -31,9 +31,9 @@ public class 动态规划硬币 {
 		dp[0] = 1;
 		for (int i = 0; i < v.length; i++) {
 			for (int j = v[i]; j <= k; j++) {
-				dp[j] = (dp[j] + dp[j - v[i]]) % 100000007;
+				dp[j] = (dp[j] + dp[j - v[i]]);// % 100000007
 			}
 		}
-		return dp[k] % 100000007;
+		return dp[k];// % 100000007;
 	}
 }
