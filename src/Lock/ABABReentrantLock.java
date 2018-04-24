@@ -20,10 +20,11 @@ ReentrantLock和synchronized关键字的区别
             而ReentrantLock只需要多次调用newCondition方法即可。
 
 性能比较
+concurrent包JDK1.5开始提供，简单易操作的并发
 在JDK1.6之前，ReentrantLock的性能要明显优于synchronized，但是JDK1.6中加入了很多针对锁的优化措施，synchronized和ReentrantLock的性能基本完全持平了。
 
 ReentrantLock缺点
-ReentrantLock的主要缺点是方法需要置于try-finally块中，另外，开发人员需要负责获取和释放锁，而开发人员常常忘记在finally中释放锁。
+ReentrantLock的主要缺点是方法需要置于try-finally块中，另外，开发人员需要负责获取和释放锁。
  * @author Lenovo
  *
  */
