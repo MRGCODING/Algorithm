@@ -35,7 +35,7 @@ class DateTestFactory extends FutureProxy<DateTest> {
 
 	@Override
 	protected Class<? extends DateTest> getInterface() {
-		return DateTest.class;
+		return DateTest.class; 
 	}
 }
 

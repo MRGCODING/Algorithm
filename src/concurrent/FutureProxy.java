@@ -67,7 +67,7 @@ public abstract class FutureProxy<T> {
 	/**
 	 * 实现java.util.concurrent.ThreadFactory接口
 	 * 
-	 * @author chenpeng
+	 * @author Lenovo
 	 *
 	 */
 	private static final class ThreadFactoryImpl implements ThreadFactory {
