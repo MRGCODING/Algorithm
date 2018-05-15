@@ -1,4 +1,4 @@
-package DS;
+package 数据结构;
 
 import java.util.Arrays;
 
@@ -46,18 +46,6 @@ public class HeapSort {
 		arr[i] = temp;// 将temp值放到最终的位置
 	}
 
-	private static void swap1(int i, int j) {
-		int temp = i;
-		i = j;
-		j = temp;
-	}
-	/**
-	 * 交换元素
-	 * 
-	 * @param arr
-	 * @param a
-	 * @param b
-	 */
 	public static void swap(int[] arr, int a, int b) {
 		int temp = arr[a];
 		arr[a] = arr[b];

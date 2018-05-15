@@ -2,6 +2,11 @@ package worktime19;
 
 import java.util.Scanner;
 
+/**
+ * 硬币兑换的种数
+ * @author Lenovo
+ *
+ */
 public class 动态规划硬币 {
 
 	private static Scanner scanner;
@@ -30,6 +35,7 @@ public class 动态规划硬币 {
 		long[] dp = new long[k + 1];
 		dp[0] = 1;
 		for (int i = 0; i < v.length; i++) {
+			//注意到和0-1背包的不同之处
 			for (int j = v[i]; j <= k; j++) {
 				dp[j] = (dp[j] + dp[j - v[i]]);// % 100000007
 			}

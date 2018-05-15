@@ -1,4 +1,4 @@
-package DS;
+package 数据结构;
 
 import java.util.Arrays;
 
