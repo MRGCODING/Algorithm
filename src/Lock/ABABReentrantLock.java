@@ -12,9 +12,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * 
  * ReentrantLock和synchronized关键字的区别
  * 
- * 1.tryLock
- * 2.lockInterruptibly
- * 3.newCondition
+ * 1.tryLock 2.lockInterruptibly 3.newCondition
  * ReentrantLock在等待锁时可以使用lockInterruptibly()方法选择中断，
  * 改为处理其他事情，而synchronized关键字，线程需要一直等待下去。
  * 同样的，tryLock()方法可以设置超时时间，用于在超时时间内一直获取不到锁时进行中断。
@@ -35,12 +33,14 @@ public class ABABReentrantLock {
 	private ReentrantLock lock = new ReentrantLock();
 	Condition aCondition = lock.newCondition();
 	Condition bCondition = lock.newCondition();
+	Condition cCondition = lock.newCondition();
 
 	public static void main(String[] args) {
 		ABABReentrantLock test = new ABABReentrantLock();
 
 		test.new AOutput().start();
 		test.new BOutput().start();
+		test.new COutput().start();
 	}
 
 	class AOutput extends Thread {
@@ -71,8 +71,27 @@ public class ABABReentrantLock {
 				try {
 					lock.lock();
 					System.out.println("B");
-					aCondition.signal();
+					cCondition.signal();
 					bCondition.await();
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				} finally {
+					lock.unlock();
+				}
+			}
+		}
+	}
+
+	class COutput extends Thread {
+
+		@Override
+		public void run() {
+			while (true) {
+				try {
+					lock.lock();
+					System.out.println("C");
+					aCondition.signal();
+					cCondition.await();
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				} finally {

@@ -8,6 +8,7 @@ public class ABABSynchronized {
 
 		test.new Output(lock, "A").start();
 		test.new Output(lock, "B").start();
+		test.new Output(lock, "C").start();
 	}
 
 	class Output extends Thread {

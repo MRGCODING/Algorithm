@@ -11,7 +11,7 @@ public class 机器人上下左右 {
 	}
 
 	public static boolean check(int threshold, int rows, int cols, int i, int j, boolean[] flag) {
-		if (i < rows && j < cols && i >= 0 && j >= 0 && flag[i * cols + j] == false && Count(i) + Count(j) <= threshold)
+		if (i >= 0 && j >= 0 && i < rows && j < cols && flag[i * cols + j] == false && Count(i) + Count(j) <=  threshold)
 			return true;
 		else
 			return false;

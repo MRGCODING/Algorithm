@@ -36,7 +36,7 @@ public class HeapSort {
 			if (k + 1 < length && arr[k] < arr[k + 1]) {// 如果左子结点小于右子结点，k指向右子结点
 				k++;
 			}
-			if (arr[k] > temp) {// 如果子节点大于父节点，将子节点值赋给父节点（不用进行交换）
+			if (arr[k] > temp) {// 如果子节点大于父节点，将子节点值赋给父节点（不用进行交换）,构建大顶堆
 				arr[i] = arr[k];
 				i = k;
 			} else {
