@@ -8,7 +8,6 @@ public class Solution3and15反转链表 {
 	public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
 		ListNode head = listNode;
 		ListNode pre = null;
-		ListNode next = null;
 		ArrayList<Integer> res = new  ArrayList<Integer>();
 		while (head != null) {
 			ListNode temp = head.next;
