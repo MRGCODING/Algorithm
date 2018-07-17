@@ -2,7 +2,7 @@ package 剑指Offer;
 
 import Offer.pojo.TreeNode;
 
-public class 平衡二叉树 {
+public class 二叉树平衡 {
 	public boolean IsBalanced_Solution(TreeNode root) {
 		int[] depth = new int[1];
 		return helper(root, depth);

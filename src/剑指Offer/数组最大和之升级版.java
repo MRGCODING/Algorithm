@@ -1,6 +1,6 @@
 package 剑指Offer;
 
-public class 连续子数组最大和之升级版 {
+public class 数组最大和之升级版 {
 	// 股市买入卖出
 	public int calculateMax(int[] prices) {
 		if (prices == null || prices.length < 2)

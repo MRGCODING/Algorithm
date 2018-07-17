@@ -2,7 +2,7 @@ package 剑指Offer;
 
 import Offer.pojo.ListNode;
 
-public class 两个链表第一个公公交点 {
+public class 链表第一个公公交点 {
 	/*
 	 * public class ListNode { int val; ListNode next = null;
 	 * 

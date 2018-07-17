@@ -15,7 +15,7 @@ public class 二叉树中和的路径 {
 		list.add(root.val);
 		target -= root.val;
 		if (target == 0 && root.left == null && root.right == null)
-			res.add(new ArrayList<Integer>(list));
+			res.add(new ArrayList<Integer>(list));// 否则传引用会GG
 		FindPath(root.left, target);
 		FindPath(root.right, target);
 		list.remove(list.size() - 1);

@@ -2,7 +2,7 @@ package 剑指Offer;
 
 import Offer.pojo.ListNode;
 
-public class 合并两个排序链表递归 {
+public class 链表合并两个排序递归 {
 	public ListNode Merge(ListNode list1, ListNode list2) {
 		ListNode pre = null;
 		if (list1 == null)
