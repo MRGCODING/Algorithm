@@ -1,2 +1,2 @@
 # Algorithm
-Java learning stuff,include ACM,Language and so on.
+Java learning stuff,including ACM,Language and so on.
