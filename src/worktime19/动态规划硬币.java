@@ -37,9 +37,9 @@ public class 动态规划硬币 {
 		for (int i = 0; i < v.length; i++) {
 			//注意到和0-1背包的不同之处
 			for (int j = v[i]; j <= k; j++) {
-				dp[j] = (dp[j] + dp[j - v[i]]);// % 100000007
+				dp[j] = (dp[j] + dp[j - v[i]]);
 			}
 		}
-		return dp[k];// % 100000007;
+		return dp[k];
 	}
 }
